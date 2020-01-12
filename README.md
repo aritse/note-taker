@@ -10,5 +10,5 @@ The application provides the following API routes:
 - POST `/api/notes` - recieves a new note to save on the request body, adds it to the `db.json` file, and then returns the new note to the client.
 - DELETE `/api/notes/:id` - recieves a query paramter containing the id of a note to delete. This means an id is created for each note when the note is added to `db.json`.
 
-![Splash Screen](.\public\assets\images\screenshot.PNG)
-![Splash Screen](.\public\assets\images\screenshot2.PNG)
+![Splash Screen](public/assets/images/screenshot.PNG)
+![Splash Screen](public/assets/images/screenshot2.PNG)
