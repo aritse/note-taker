@@ -36,7 +36,8 @@ async function addNote(note, res) {
   try {
     const data = await readFileAsync(db, "utf8");
     const objNotes = JSON.parse(data);
-    note.id = objNotes[objNotes.length - 1].id + 1;
+    const len = objNotes.length;
+    note.id = len > 0 ? objNotes[len - 1].id + 1 : 1;
     objNotes.push(note);
     const strNotes = JSON.stringify(objNotes, null, 2);
     await writeFileAsync(db, strNotes);
